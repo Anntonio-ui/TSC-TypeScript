@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Empleado - Clase Abstracta Persona</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Información del Empleado</h1>
+
+  <div class="form-container">
+    <label>Nombre:
+      <input type="text" id="nombre" placeholder="Ana" />
+    </label>
+    <label>Apellido:
+      <input type="text" id="apellido" placeholder="Gómez" />
+    </label>
+    <label>Dirección:
+      <input type="text" id="direccion" placeholder="Av. Central 123" />
+    </label>
+    <label>Teléfono:
+      <input type="text" id="telefono" placeholder="555-1234" />
+    </label>
+    <label>Edad:
+      <input type="number" id="edad" min="0" placeholder="25" />
+    </label>
+    <label>Sueldo:
+      <input type="number" id="sueldo" min="0" step="0.01" placeholder="1500.75" />
+    </label>
+    <button id="btnMostrar">Mostrar Datos</button>
+  </div>
+
+  <pre id="resultado"></pre>
+
+  <script src="main.js"></script>
+  <script>
+    document.getElementById('btnMostrar').addEventListener('click', () => {
+      const nombre = document.getElementById('nombre').value.trim();
+      const apellido = document.getElementById('apellido').value.trim();
+      const direccion = document.getElementById('direccion').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const edad = parseInt(document.getElementById('edad').value);
+      const sueldo = parseFloat(document.getElementById('sueldo').value);
+
+      if (!nombre || !apellido || !direccion || !telefono || isNaN(edad) || isNaN(sueldo)) {
+        alert('Por favor completa todos los campos correctamente.');
+        return;
+      }
+
+      const empleado = new Empleado(nombre, apellido, direccion, telefono, edad);
+      empleado.cargarSueldo(sueldo);
+
+      let datos = '';
+      datos += `Nombre: ${empleado.nombre} ${empleado.apellido}\n`;
+      datos += `Dirección: ${empleado.direccion}\n`;
+      datos += `Teléfono: ${empleado.telefono}\n`;
+      datos += `Edad: ${empleado.edad}\n`;
+      datos += empleado.esMayorDeEdad() + '\n';
+      datos += `Sueldo: $${sueldo.toFixed(2)}`;
+
+      document.getElementById('resultado').textContent = datos;
+    });
+  </script>
+</body>
+</html>

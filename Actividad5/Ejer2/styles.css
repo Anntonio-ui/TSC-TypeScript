@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.calculadora {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 8px;
+    margin: 5px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+h2 {
+    margin-top: 15px;
+}

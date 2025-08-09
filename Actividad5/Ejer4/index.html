@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cuenta Bancaria - POO</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Gestión de Cuenta Bancaria</h1>
+
+  <div class="form-container">
+    <h2>Crear Cuenta</h2>
+    <label>Nombre:
+      <input type="text" id="nombre" placeholder="Juan Pérez" />
+    </label>
+    <label>Cantidad inicial ($):
+      <input type="number" id="cantidad" placeholder="100" min="0" step="0.01" />
+    </label>
+    <label>Tipo de cuenta:
+      <input type="text" id="tipoCuenta" placeholder="Ahorros" />
+    </label>
+    <label>Número de cuenta:
+      <input type="text" id="numeroCuenta" placeholder="1234567890" />
+    </label>
+    <button id="crearCuenta">Crear Cuenta</button>
+  </div>
+
+  <div class="acciones" style="display:none;">
+    <h2>Operaciones</h2>
+    <button id="btnDepositar">Depositar cantidad inicial</button>
+
+    <label>Retirar monto ($):
+      <input type="number" id="montoRetiro" min="0" step="0.01" />
+    </label>
+    <button id="btnRetirar">Retirar</button>
+
+    <h3>Información de la Cuenta:</h3>
+    <pre id="infoCuenta"></pre>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

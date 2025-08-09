@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    margin-top: 50px;
+}
+
+header.izquierda {
+    text-align: left;
+}
+
+header.centrado {
+    text-align: center;
+}
+
+header.derecha {
+    text-align: right;
+}

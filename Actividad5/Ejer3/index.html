@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase Canción</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Prueba Clase Canción</h1>
+    <div id="info"></div>
+
+    <script src="main.js"></script>
+    <script>
+        const cancion = new Cancion("Shape of You", "Pop");
+        cancion.setAutor("Ed Sheeran");
+
+        document.getElementById("info").textContent = cancion.mostrarDatos();
+    </script>
+</body>
+</html>
